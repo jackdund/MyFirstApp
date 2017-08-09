@@ -8,11 +8,23 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+         <ion-icon class="totem" name=radio-button-on [ngStyle]="{'color':totemColor }"></ion-icon>
+         <!-- <ion-icon class="totem" name="radio-button-on" ng-style="{'color':rgb(100,2,0)}"></ion-icon>  -->
+        <!-- {{colorInterp}} -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-range (ionChange)="printInterp()" ratio [(ngModel)]="ratio">
+            <ion-icon small range-left name="sunny"></ion-icon>
+            <ion-icon range-right name="sunny"></ion-icon>
+          </ion-range>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
