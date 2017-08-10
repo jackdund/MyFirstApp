@@ -25,8 +25,6 @@ export class HomePage {
     this.red = Math.floor(this.startColor.red + this.ratio/100 * (this.endColor.red - this.startColor.red));
     this.blue = Math.floor(this.startColor.blue + this.ratio/100 * (this.endColor.blue - this.startColor.blue));
     this.green = Math.floor(this.startColor.green + this.ratio/100 * (this.endColor.green - this.startColor.green));
-    // this.blue = this.startColor.blue + this.ratio;
-    // this.green = this.startColor.green + this.ratio;
     console.log(this.ratio + " -->" + this.red + " " + this.blue + " " + this.green)
     this.onUpdateColor();
   }
@@ -36,9 +34,5 @@ export class HomePage {
     console.log(this.totemColor);
   }
   
-  onSetColor(){
-    return "{rgb(124,0,0)}";
-    //return "{ color : " + this.totemColorToString() + "}";
-  }
 
 }
